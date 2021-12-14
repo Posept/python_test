@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky - Login{% endblock %}
+
+{% block page_content %}
+
+<div>
+
+    <img src="https://fptshop.com.vn/Uploads/images/2015/Tin-Tuc/02/06/Internet(1).jpg" width="600px" alt="">
+    <div class="col-md-4"style="float: right; background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+ margin-top:25px; border-radius:5%; border:1px solid #E6E6FA; " >
+    <div>
+        <h1 style="font-family:Comic Sans; font-weight: bold;">Sign In</h1>
+        {{ wtf.quick_form(form) }}
+
+    </div>
+    <p>Forgot your password? <a href="{{ url_for('auth.password_reset_request') }}">Click here to reset it</a>. </p>
+    <p>New user? <a href="{{ url_for('auth.register') }}">Click here to register</a>.</p>
+</div>
+</div>
+
+{% endblock %}
